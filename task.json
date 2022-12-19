@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "4c9b1222-75a3-418b-b61d-24b526478997",
+  "name": "AzureWorkItemReader",
+  "friendlyName": "AzureWorkItemReader",
+  "description": "Task to read Azure Work Items fields",
+  "helpMarkDown": "AzureWorkItemReader",
+  "category": "Utility",
+  "author": "curo",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Echo $(samplestring)",
+  "inputs": [
+    {
+      "name": "organization",
+      "type": "string",
+      "label": "organization name",
+      "defaultValue": "southernmanagement",
+      "required": true,
+      "helpMarkDown": "Azure Organization name"
+    },
+    {
+      "name": "pat",
+      "type": "string",
+      "label": "Personal Access Token",
+      "required": true,
+      "helpMarkDown": "Azure Personal Access Token"
+    },
+    {
+      "name": "field",
+      "type": "string",
+      "label": "WorkItem Field",
+      "defaultValue": "QA Required",
+      "required": true,
+      "helpMarkDown": "field to query on workItem"
+    },
+    {
+      "name": "pullRequestId",
+      "type": "string",
+      "label": "pullRequestId",
+      "required": true,
+      "helpMarkDown": "Azure pullRequestId"
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "index.js"
+    }
+  }
+}
