@@ -4,7 +4,7 @@ import * as azdev from "azure-devops-node-api";
 async function run() {
     try {
         const organization = tl.getInput('organization', true);
-        const pat = tl.getInput('pat', true) //icsnoxzcyqp7rpc6xy5fnzmr3tclnomhadifg2ef7sznszofddva
+        const pat = tl.getInput('pat', true)
         const inputField: string | undefined = tl.getInput('field', true);
         const pullRequestId: number | undefined = parseInt(<string>tl.getInput('pullRequestId', true));
 
