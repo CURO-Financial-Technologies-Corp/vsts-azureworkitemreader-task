@@ -1,0 +1,65 @@
+{
+  "manifestVersion": 1,
+  "id": "azureworkitemreader",
+  "name": "Azure Work Item Reader",
+  "version": "0.0.2",
+  "public": true,
+  "publisher": "Bheem",
+  "targets": [{
+    "id": "Microsoft.VisualStudio.Services"
+  }],
+  "description": "Task to read flags from Azure Work Items",
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "release",
+    "build",
+    "token",
+    "replace",
+    "variable",
+    "substitution"
+  ],
+  "links": {
+    "support": {
+      "uri": "https://github.com/CURO-Financial-Technologies-Corp/buildAndReleaseTask/issues"
+    }
+  },
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "branding": {
+    "color": "#1C3272",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/CURO-Financial-Technologies-Corp/buildAndReleaseTask"
+  },
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE.txt"
+    }
+  },
+  "files": [{
+    "path": "tasks"
+  },
+    {
+      "path": "images",
+      "addressable": true
+    }
+  ],
+  "contributions": [{
+    "id": "replacetokens-task",
+    "type": "ms.vss-distributed-task.task",
+    "targets": [
+      "ms.vss-distributed-task.tasks"
+    ],
+    "properties": {
+      "name": "tasks"
+    }
+  }]
+}
